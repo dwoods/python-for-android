@@ -196,8 +196,8 @@ function push_arm() {
         export TOOLCHAIN_PREFIX=arm-linux-androideabi
         export TOOLCHAIN_VERSION=4.9
     else
-        echo "Error: Please report issue to enable support for newer ndk."
-        exit 1
+        export TOOLCHAIN_PREFIX=arm-linux-androideabi
+        export TOOLCHAIN_VERSION=4.9
     fi
 
 	export PATH="$ANDROIDNDK/toolchains/$TOOLCHAIN_PREFIX-$TOOLCHAIN_VERSION/prebuilt/$PYPLATFORM-x86/bin/:$ANDROIDNDK/toolchains/$TOOLCHAIN_PREFIX-$TOOLCHAIN_VERSION/prebuilt/$PYPLATFORM-x86_64/bin/:$ANDROIDNDK:$ANDROIDSDK/tools:$PATH"
